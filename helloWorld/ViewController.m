@@ -9,6 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *firstLabel;
+@property NSString *favoriteBand;
+@property int numberOfMembers;
 
 @end
 
@@ -16,12 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.favoriteBand = @"Young Money";
+    self.numberOfMembers = 10;
+    self.firstLabel.text = [NSString stringWithFormat:@"%@ has %i members",self.favoriteBand, self.numberOfMembers];
+
 }
 
 @end
